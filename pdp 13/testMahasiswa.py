@@ -1,0 +1,30 @@
+from mahasiswa import *
+def main():
+	s1=mahasiswa()
+	s2=mahasiswa('A11-1234','Budi',3.57)
+	data=list()
+	data.append(mahasiswa('A11-9999','Budi',3.57))
+	data.append(mahasiswa('A11-1111','Bagus',3.17))
+	data.append(mahasiswa('A11-1212','Alan',2.99))
+	TulisData(s1)
+	TulisData(s2)
+	print(getNim(s2))
+	print(getNama(s2))
+	print(getIpk(s2))
+	setNim(s2,'A11-9999')
+	setNama(s2,'Agus Bijaksana')
+	setIpk(s2,3.98)
+	TulisData(s2)
+	TulisData(data[0])
+	#found=(m for m in data if m.nim=='A11-1111')
+	TulisData(Searching1(data,'A11-1111'))
+	TulisData(Searching1(data,'A11-111B'))
+	print("index:{}".format(Searching2(data,'A11-1111')))
+	print("index:{}".format(Searching2(data,'A11-111B')))
+	Sorting(data,0)
+	printList(data)
+	print("Ta da !")
+if __name__ == '__main__':
+	main()
+
+
